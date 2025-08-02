@@ -20,7 +20,6 @@ def run_speedtest():
         server_nome = f"{best_server['name']}, {best_server['country']}"
 
         # Atualização de progresso
-        st.get_best_server()
         ping = st.results.ping
 
         download = st.download() / 1_000_000
@@ -51,12 +50,12 @@ def run_speedtest():
         return jsonify(
             {
                 "status": "success",
-                "ping": round(ping_val, 2),
+                "server": f"{best_server['sponsor']} ({best_server['name']})",
                 "download": round(download, 2),
                 "upload": round(upload, 2),
+                "ping": round(ping_val, 2),
                 "cping": round(avg_cping, 2),
                 "jitter": round(jitter, 2),
-                "server": server_nome,
             }
         )
 
