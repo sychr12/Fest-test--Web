@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --primary: #48eb91;
+  --primary-light: #3bf654;
+  --secondary: #10b981;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+  --text: #334155;
+  --text-light: #64748b;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f1f5f9;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.speed-test-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 560px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.speed-test-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.test-title {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.connection-info {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.speed-bars {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.speed-bar {
+  flex: 1;
+}
+
+.bar-title {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.test-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.download-icon {
+  background-color: var(--primary);
+}
+
+.upload-icon {
+  background-color: var(--secondary);
+}
+
+.bar-container {
+  height: 200px;
+  width: 30px;
+  background-color: var(--border);
+  border-radius: 15px;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 15px;
+  transition: height 1s ease-out;
+}
+
+#barradownload {
+  background-color: var(--primary);
+  height: 0%;
+}
+
+#barraupload {
+  background-color: var(--secondary);
+  height: 0%;
+}
+
+.ping-container {
+  margin-top: 24px;
+}
+
+.ping-title {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.ping-value {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 8px 0;
+  color: var(--dark);
+}
+
+.ping-bar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 4px;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#pingbarra {
+  position: absolute;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  width: 0%;
+  transition: width 1s ease-out;
+}
+
+.ping-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.additional-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.metric-box {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.metric-title {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+#repeat-test {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#repeat-test:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .speed-test-container {
+    padding: 32px 24px;
+    border-radius: 0;
+  }
+
+  .speed-bars {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
