@@ -34,10 +34,10 @@
       <div class="speed-bars">
         <div class="speed-bar">
           <div class="bar-title">
-            <div class="test-icon download-icon">
-              <i class="fas fa-download"></i>
+            <div class="test-icon upload-icon">
+              <i class="fas fa-upload"></i>
             </div>
-            DOWNLOAD
+            UPLOAD
           </div>
           <div class="bar-container">
             <div class="bar-fill animationBar" id="barradownload"></div>
@@ -47,10 +47,11 @@
 
         <div class="speed-bar">
           <div class="bar-title">
-            <div class="test-icon upload-icon">
-              <i class="fas fa-upload"></i>
+            <div class="test-icon download-icon">
+            
+              <i class="fas fa-download"></i>
             </div>
-            UPLOAD
+            DOWNLOAD
           </div>
           <div class="bar-container">
             <div class="bar-fill animationBar2" id="barraupload"></div>
@@ -117,8 +118,8 @@
           document.getElementById("barraupload").classList.add("animationBar2");
           document.getElementById("pingbarra").classList.add("animationpig");
 
-          document.getElementById("downloadvalues").textContent = "0 Mbps";
           document.getElementById("uploadvolues").textContent = "0 Mbps";
+          document.getElementById("downloadvalues").textContent = "0 Mbps";
           document.getElementById("pingvalues").textContent = "...";
           document.getElementById("cpingvalue").textContent = "...";
           document.getElementById("jittervalue").textContent = "...";
