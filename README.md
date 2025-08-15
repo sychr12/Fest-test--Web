@@ -30,9 +30,18 @@ Acesse: [http://localhost:5000](http://localhost:5000)
 | Upload    | Velocidade de envio | >20 Mbps  |
 | Ping      | Tempo de resposta | <30 ms    |
 
-## Licença
+## 🚀 Futuras Atualizações
 
-MIT - Veja [LICENSE](LICENSE)
+Planejamos implementar em breve:
+
+- **Comparativo histórico** de testes
+- **Recomendações automáticas** para melhorar a conexão
+- **Teste em segundo plano** sem interromper o uso
+- **Integração com APIs** de provedores locais
+- **Versão mobile** otimizada
+- **Exportação de resultados** (PDF/CSV)
+- **Monitoramento contínuo** da conexão
+- **Alertas** quando a velocidade cair abaixo do contratado
 ```
 
 Principais características:
