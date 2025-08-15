@@ -2,6 +2,9 @@
 
 <img width="542" height="776" alt="image" src="https://github.com/user-attachments/assets/a119836e-49f8-4447-9b8a-227a9c53053f" />
 
+<img width="548" height="779" alt="image" src="https://github.com/user-attachments/assets/d2ac005c-5e2f-45c4-9f1c-d1a6b6025b7a" />
+
+
  
   <p>✨ Interface moderna e intuitiva para análise de conexão</p>
 </div>
