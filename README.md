@@ -87,8 +87,6 @@ Acesse no navegador: `http://localhost:5000`
 
 ## 🎨 Design e Interface
 
-![Diagrama de Interface](https://via.placeholder.com/600x400/10b981/ffffff?text=UI+Design)
-
 - **Cores Principais**:
   - Verde (`#48eb91`) para conexões boas
   - Amarelo para conexões regulares
@@ -140,8 +138,4 @@ festtestweb/
 
 Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para detalhes.
 
----
-
-**Desenvolvido por**: Luiz Felipe  
-**Contato**: exemplo@email.com  
-**Versão**: 1.0.0
+```
