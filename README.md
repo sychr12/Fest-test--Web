@@ -1,108 +1,146 @@
-# FesttestWeb
+# FesttestWeb - Teste de Velocidade de Internet Completo
 
+![Captura de Tela do FesttestWeb](https://via.placeholder.com/800x500/48eb91/ffffff?text=FesttestWeb+Speed+Test) *(Exemplo de imagem - substitua pela real)*
 
+## 🌐 Visão Geral
 
----
-## 📡 Descrição do Projeto
+O FesttestWeb é uma ferramenta avançada para teste de velocidade de internet que oferece métricas precisas e visualização intuitiva. Desenvolvido com tecnologias modernas, ele permite:
 
-Este é um aplicativo web que realiza testes de velocidade da internet, medindo:
+- Testes completos de download/upload
+- Análise de latência e qualidade de conexão
+- Seleção de servidores específicos
+- Visualização gráfica dos resultados
 
-* Velocidade de **download** (em Mbps)
-* Velocidade de **upload** (em Mbps)
-* **Latência** (ping, em ms)
+## 🛠 Tecnologias Utilizadas
 
-O aplicativo foi desenvolvido com:
+### Frontend
+- **HTML5** (Estrutura semântica)
+- **CSS3** (Design responsivo com Flexbox/Grid)
+- **JavaScript** (Lógica e interações)
+- **Chart.js** (Visualização de dados)
+- **Font Awesome** (Ícones)
 
-* **Frontend**: HTML5, CSS3 e JavaScript
-* **Backend**: Python com Flask
-* **Biblioteca de teste de velocidade**: `speedtest-cli`
+### Backend
+- **Python** (Lógica do servidor)
+- **Flask** (Framework web)
+- **Speedtest-CLI** (Medições de velocidade)
+- **Ping3** (Análise de latência)
 
----
+## ⚡ Funcionalidades Principais
 
-## ⚙️ Funcionalidades
+1. **Teste Completo de Velocidade**
+   - Download (Mbps)
+   - Upload (Mbps)
+   - Ping/Latência (ms)
+   - Jitter (variação de latência)
+   - CPING (ping personalizado)
 
-1. **Teste de Velocidade Automático**: O teste é executado automaticamente ao carregar a página.
-2. **Visualização Gráfica**:
+2. **Seleção de Servidores**
+   ```mermaid
+   graph TD
+   A[Servidor Automático] --> B[Otimização]
+   B --> C[Melhor Performance]
+   D[Servidor Manual] --> E[Teste Específico]
+   ```
 
-   * Barras animadas para download e upload
-   * Barra de progresso para ping
-3. **Repetição de Teste**: Botão para repetir o teste manualmente.
-4. **Design Responsivo**: Layout que se adapta a diferentes tamanhos de tela.
-5. **Feedback Visual**:
+3. **Visualização Interativa**
+   - Barras animadas de download/upload
+   - Gráfico de ping escalável
+   - Cores indicativas de qualidade
 
-   * Animações durante o teste
-   * Cores que indicam o status da conexão
+4. **Informações de Rede**
+   - Detecção automática de IP
+   - Identificação do provedor (ISP)
+   - Localização aproximada
 
----
-
-## ▶️ Como Executar o Projeto
+## 🖥 Como Executar
 
 ### Pré-requisitos
-
-* Python 3.x instalado
-* Pip (gerenciador de pacotes do Python)
+- Python 3.8+
+- Pip instalado
+- Conexão com internet
 
 ### Instalação
+```bash
+git clone https://github.com/seu-usuario/festtestweb.git
+cd festtestweb
+pip install -r requirements.txt
+```
 
-1. Clone o repositório:
+### Execução
+```bash
+python app.py
+```
 
-   ```bash
-   git clone [URL_DO_REPOSITORIO]
-   cd [NOME_DO_DIRETORIO]
-   ```
+Acesse no navegador: `http://localhost:5000`
 
-2. Instale as dependências:
+## 📊 Métricas Medidas
 
-   ```bash
-   pip install flask speedtest-cli
-   ```
+| Métrica       | Descrição                          | Valores Ideais       |
+|---------------|------------------------------------|----------------------|
+| Download      | Velocidade de recebimento de dados | >50 Mbps (residencial) |
+| Upload        | Velocidade de envio de dados       | >20 Mbps (residencial) |
+| Ping          | Tempo de resposta                  | <30 ms (ótimo)       |
+| Jitter        | Variação do ping                   | <5 ms (estável)      |
+| CPING         | Ping customizado para Google       | <20 ms               |
 
-3. Execute o aplicativo:
+## 🎨 Design e Interface
 
-   ```bash
-   python app.py
-   ```
+![Diagrama de Interface](https://via.placeholder.com/600x400/10b981/ffffff?text=UI+Design)
 
-4. Acesse no navegador:
+- **Cores Principais**:
+  - Verde (`#48eb91`) para conexões boas
+  - Amarelo para conexões regulares
+  - Vermelho para conexões ruins
 
-   ```
-   http://localhost:5000
-   ```
+- **Elementos Interativos**:
+  - Barras de progresso animadas
+  - Botão de repetição de teste
+  - Seleção de servidores
+
+## 🌟 Recursos Avançados
+
+1. **Multi-Servidor**
+   - Lista de servidores brasileiros pré-configurados:
+     - Claro, Vivo, TIM, Oi
+     - Algar Telecom, Sercomtel
+     - Provedores regionais
+
+2. **Análise de Jitter**
+   - 10 medições consecutivas de ping
+   - Cálculo da variação média
+
+3. **Detecção de Localização**
+   - Integração com IP-API.com
+   - Exibe cidade, país e provedor
+
+## 📂 Estrutura de Arquivos
+
+```
+festtestweb/
+├── app.py              # Lógica principal do servidor
+├── templates/
+│   └── index.html      # Página web principal
+├── static/
+│   └── style.css       # Estilos CSS
+├── requirements.txt    # Dependências
+└── README.md           # Documentação
+```
+
+## 🚀 Melhorias Futuras
+
+- [ ] Histórico de testes
+- [ ] Comparação com médias regionais
+- [ ] Exportação de resultados (PDF/CSV)
+- [ ] Modo escuro/claro
+- [ ] Teste de estabilidade prolongada
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
-## 📁 Estrutura de Arquivos
-
-* `app.py`: Contém a lógica do servidor Flask e a integração com a biblioteca `speedtest-cli`.
-* `templates/index.html`: Página HTML principal com a interface do usuário.
-* `static/style.css`: Estilos CSS da aplicação.
-
----
-
-## 🎨 Personalização
-
-Você pode personalizar:
-
-* **Cores**: Altere os códigos hexadecimais no arquivo CSS.
-* **Velocidade Máxima**: Modifique o valor `150` no JavaScript para ajustar a escala das barras.
-* **Tempo de Animação**: Edite as durações no CSS.
-
----
-
-## 🚀 Possíveis Melhorias
-
-1. Adicionar histórico de testes
-2. Implementar gráficos de tendência
-3. Suportar múltiplos servidores de teste
-4. Incluir comparação com médias regionais
-5. Adicionar modo claro/escuro
-
----
-
-## ⚠️ Limitações
-
-* O teste pode ser afetado por outros dispositivos/processos na rede
-* A precisão depende da qualidade da conexão com os servidores do `speedtest`
-* Em conexões muito rápidas (>150 Mbps), as barras podem ultrapassar o limite visual
-
----
+**Desenvolvido por**: Luiz Felipe  
+**Contato**: exemplo@email.com  
+**Versão**: 1.0.0
