@@ -1,6 +1,7 @@
 # 🚀 FesttestWeb - Teste de Velocidade Inteligente
 
-<div align="center">
+<img width="542" height="776" alt="image" src="https://github.com/user-attachments/assets/a119836e-49f8-4447-9b8a-227a9c53053f" />
+
  
   <p>✨ Interface moderna e intuitiva para análise de conexão</p>
 </div>
