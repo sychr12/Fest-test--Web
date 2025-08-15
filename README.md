@@ -1,141 +1,116 @@
-# FesttestWeb - Teste de Velocidade de Internet Completo
+# 🚀 FesttestWeb - Teste de Velocidade Inteligente
 
-<img width="539" height="939" alt="image" src="https://github.com/user-attachments/assets/dbaff52f-1f5d-432a-b6af-17a48667c626" />
+<div align="center">
+  <img width="80%" src="https://github.com/user-attachments/assets/dbaff52f-1f5d-432a-b6af-17a48667c626" alt="Interface FesttestWeb">
+  <p>✨ Interface moderna e intuitiva para análise de conexão</p>
+</div>
 
+## 🌟 Recursos Destacados
 
-## 🌐 Visão Geral
-
-O FesttestWeb é uma ferramenta avançada para teste de velocidade de internet que oferece métricas precisas e visualização intuitiva. Desenvolvido com tecnologias modernas, ele permite:
-
-- Testes completos de download/upload
-- Análise de latência e qualidade de conexão
-- Seleção de servidores específicos
-- Visualização gráfica dos resultados
+| 🔍 Diagnóstico Completo | 🎯 Precisão | 🖥 Multiplataforma |
+|-----------------------|------------|------------------|
+| Teste download, upload, ping e jitter | Algoritmos otimizados | Funciona em qualquer navegador |
+| 🏆 **Servidores Brasileiros** | 📊 **Gráficos Interativos** | 🔄 **Teste Rápido** |
+| Claro, Vivo, TIM e outros | Visualização intuitiva dos dados | Resultados em menos de 30s |
 
 ## 🛠 Tecnologias Utilizadas
 
-### Frontend
-- **HTML5** (Estrutura semântica)
-- **CSS3** (Design responsivo com Flexbox/Grid)
-- **JavaScript** (Lógica e interações)
-- **Chart.js** (Visualização de dados)
-- **Font Awesome** (Ícones)
+<div align="center">
+  
+| **Frontend** | **Backend** | **Bibliotecas** |
+|--------------|-------------|-----------------|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | ![Speedtest](https://img.shields.io/badge/Speedtest-C71F25?style=for-the-badge&logo=speedtest&logoColor=white) |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) | ![Ping3](https://img.shields.io/badge/Ping3-00BFFF?style=for-the-badge) |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |  | ![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white) |
 
-### Backend
-- **Python** (Lógica do servidor)
-- **Flask** (Framework web)
-- **Speedtest-CLI** (Medições de velocidade)
-- **Ping3** (Análise de latência)
+</div>
 
-## ⚡ Funcionalidades Principais
+## ⚡ Como Usar
 
-1. **Teste Completo de Velocidade**
-   - Download (Mbps)
-   - Upload (Mbps)
-   - Ping/Latência (ms)
-   - Jitter (variação de latência)
-   - CPING (ping personalizado)
-
-2. **Seleção de Servidores**
-   ```mermaid
-   graph TD
-   A[Servidor Automático] --> B[Otimização]
-   B --> C[Melhor Performance]
-   D[Servidor Manual] --> E[Teste Específico]
-   ```
-
-3. **Visualização Interativa**
-   - Barras animadas de download/upload
-   - Gráfico de ping escalável
-   - Cores indicativas de qualidade
-
-4. **Informações de Rede**
-   - Detecção automática de IP
-   - Identificação do provedor (ISP)
-   - Localização aproximada
-
-## 🖥 Como Executar
-
-### Pré-requisitos
-- Python 3.8+
-- Pip instalado
-- Conexão com internet
-
-### Instalação
 ```bash
+# 1. Clone o repositório
 git clone https://github.com/seu-usuario/festtestweb.git
-cd festtestweb
-pip install -r requirements.txt
-```
 
-### Execução
-```bash
+# 2. Acesse a pasta do projeto
+cd festtestweb
+
+# 3. Instale as dependências
+pip install -r requirements.txt
+
+# 4. Execute o aplicativo
 python app.py
 ```
 
-Acesse no navegador: `http://localhost:5000`
+🌐 Acesse no navegador: [http://localhost:5000](http://localhost:5000)
 
-## 📊 Métricas Medidas
+## 📊 Métricas Analisadas
 
-| Métrica       | Descrição                          | Valores Ideais       |
-|---------------|------------------------------------|----------------------|
-| Download      | Velocidade de recebimento de dados | >50 Mbps (residencial) |
-| Upload        | Velocidade de envio de dados       | >20 Mbps (residencial) |
-| Ping          | Tempo de resposta                  | <30 ms (ótimo)       |
-| Jitter        | Variação do ping                   | <5 ms (estável)      |
-| CPING         | Ping customizado para Google       | <20 ms               |
+<div align="center">
 
-## 🎨 Design e Interface
+| Métrica | Ícone | Descrição | Valor Ideal |
+|---------|-------|-----------|-------------|
+| **Download** | ⬇️ | Velocidade de recebimento | >50 Mbps |
+| **Upload** | ⬆️ | Velocidade de envio | >20 Mbps |
+| **Ping** | 🏓 | Tempo de resposta | <30 ms |
+| **Jitter** | 📶 | Variação de latência | <5 ms |
+| **CPING** | 🔍 | Ping para Google | <20 ms |
 
-- **Cores Principais**:
-  - Verde (`#48eb91`) para conexões boas
-  - Amarelo para conexões regulares
-  - Vermelho para conexões ruins
+</div>
 
-- **Elementos Interativos**:
-  - Barras de progresso animadas
-  - Botão de repetição de teste
-  - Seleção de servidores
+## 🎨 Design Moderno
 
-## 🌟 Recursos Avançados
-
-1. **Multi-Servidor**
-   - Lista de servidores brasileiros pré-configurados:
-     - Claro, Vivo, TIM, Oi
-     - Algar Telecom, Sercomtel
-     - Provedores regionais
-
-2. **Análise de Jitter**
-   - 10 medições consecutivas de ping
-   - Cálculo da variação média
-
-3. **Detecção de Localização**
-   - Integração com IP-API.com
-   - Exibe cidade, país e provedor
-
-## 📂 Estrutura de Arquivos
-
-```
-festtestweb/
-├── app.py              # Lógica principal do servidor
-├── templates/
-│   └── index.html      # Página web principal
-├── static/
-│   └── style.css       # Estilos CSS
-├── requirements.txt    # Dependências
-└── README.md           # Documentação
+```css
+:root {
+  --primary: #48eb91;     /* Verde vibrante */
+  --secondary: #10b981;   /* Verde mais suave */
+  --dark: #1e293b;        /* Azul escuro */
+  --light: #f8fafc;       /* Branco suave */
+}
 ```
 
-## 🚀 Melhorias Futuras
+Princípios de design:
+- ✅ Minimalista e limpo
+- ✅ Foco na usabilidade
+- ✅ Animações suaves
+- ✅ Totalmente responsivo
 
-- [ ] Histórico de testes
-- [ ] Comparação com médias regionais
-- [ ] Exportação de resultados (PDF/CSV)
-- [ ] Modo escuro/claro
-- [ ] Teste de estabilidade prolongada
+## 🌐 Servidores Suportados
+
+- **Grandes Operadoras**: Claro, Vivo, TIM, Oi
+- **Provedores Regionais**: Algar Telecom, Sercomtel
+- **Internacionais**: Servidores automáticos globais
+
+## 📌 Roadmap
+
+```mermaid
+gantt
+    title Plano de Desenvolvimento
+    dateFormat  YYYY-MM-DD
+    section Versão 1.0
+    Lançamento Inicial       :done,    des1, 2023-10-01, 7d
+    section Versão 2.0
+    Histórico de Testes      :active,  des2, 2023-11-01, 14d
+    Exportação de Resultados :         des3, after des2, 10d
+    section Versão 3.0
+    Modo Escuro             :         des4, 2024-01-01, 7d
+    Teste de Estabilidade   :         des5, after des4, 14d
+```
+
+## 🤝 Como Contribuir
+
+1. Faça um fork do projeto
+2. Crie uma branch (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-```
+---
+
+<div align="center">
+  <p>Desenvolvido com ❤️ por <strong>Luiz Felipe</strong></p>
+  <p>📧 contato@exemplo.com | 🌐 https://seusite.com</p>
+</div>
