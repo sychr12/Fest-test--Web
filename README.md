@@ -80,20 +80,7 @@ Princípios de design:
 - **Provedores Regionais**: Algar Telecom, Sercomtel
 - **Internacionais**: Servidores automáticos globais
 
-## 📌 Roadmap
 
-```mermaid
-gantt
-    title Plano de Desenvolvimento
-    dateFormat  YYYY-MM-DD
-    section Versão 1.0
-    Lançamento Inicial       :done,    des1, 2023-10-01, 7d
-    section Versão 2.0
-    Histórico de Testes      :active,  des2, 2023-11-01, 14d
-    Exportação de Resultados :         des3, after des2, 10d
-    section Versão 3.0
-    Modo Escuro             :         des4, 2024-01-01, 7d
-    Teste de Estabilidade   :         des5, after des4, 14d
 ```
 
 ## 🤝 Como Contribuir
@@ -109,8 +96,3 @@ gantt
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
-
-<div align="center">
-  <p>Desenvolvido com ❤️ por <strong>Luiz Felipe</strong></p>
-  <p>📧 contato@exemplo.com | 🌐 https://seusite.com</p>
-</div>
