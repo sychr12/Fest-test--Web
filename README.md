@@ -1,6 +1,4 @@
-Aqui está o README.md corrigido e formatado corretamente para o GitHub, com melhor organização e estrutura:
 
-```markdown
 # 🚀 FesttestWeb - Teste de Velocidade Inteligente
 
 <div align="center">
