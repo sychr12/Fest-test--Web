@@ -1,6 +1,4 @@
-Here's the corrected version with properly formatted image references:
 
-```markdown
 # FesttestWeb - Teste de Velocidade
 
 <div align="center">
@@ -47,11 +45,7 @@ Planejamos implementar em breve:
 - Exportação de resultados (PDF/CSV)
 - Monitoramento contínuo da conexão
 - Alertas quando a velocidade cair abaixo do contratado
-
-## Licença
-
-MIT - Veja [LICENSE](LICENSE)
-```
+---
 
 Key fixes made:
 1. Replaced the GitHub attachment URLs with simple `assets/screenshot.png` references
