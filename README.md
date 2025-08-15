@@ -1,7 +1,8 @@
 
 # FesttestWeb - Teste de Velocidade
 
-![Screenshot](assets/screenshot.png)
+<img width="540" height="774" alt="image" src="https://github.com/user-attachments/assets/d532022c-6265-470a-aef3-056725ea79fb" />
+
 
 Ferramenta simples para testar velocidade de internet (download, upload, ping e jitter).
 
