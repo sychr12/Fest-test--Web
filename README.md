@@ -1,7 +1,6 @@
 # FesttestWeb - Teste de Velocidade de Internet Completo
 
-![Captura de Tela do FesttestWeb](<img width="539" height="939" alt="image" src="https://github.com/user-attachments/assets/83970bf4-a559-4396-b331-149a7e6d70a1" />
-) *(Exemplo de imagem - substitua pela real)*
+![Captura de Tela do FesttestWeb](<img width="539" height="939" alt="image" src="https://github.com/user-attachments/assets/83970bf4-a559-4396-b331-149a7e6d70a1" />) *(Exemplo de imagem - substitua pela real)*
 
 ## 🌐 Visão Geral
 
