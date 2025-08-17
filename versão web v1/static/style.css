@@ -4,35 +4,41 @@
   --primary: #48eb91;
   --primary-light: #3bf654;
   --secondary: #10b981;
+  --secondary-light: #5eead4;
   --dark: #1e293b;
   --light: #f8fafc;
   --border: #e2e8f0;
   --text: #334155;
   --text-light: #64748b;
+  --shadow: 0 8px 32px rgba(16, 185, 129, 0.08);
 }
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #f1f5f9;
   color: var(--text);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  line-height: 1.5;
 }
 
 .speed-test-container {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
   width: 100%;
-  max-width: 560px;
-  padding: 40px;
+  max-width: 480px;
+  padding: 40px 32px 32px 32px;
   position: relative;
   overflow: hidden;
+  border: 1.5px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+
+.speed-test-container:hover {
+  box-shadow: 0 12px 48px rgba(16, 185, 129, 0.13);
 }
 
 .speed-test-container::after {
@@ -47,32 +53,51 @@ body {
 
 .test-title {
   color: var(--dark);
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 28px;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  letter-spacing: -1px;
 }
 
 .subtitle {
   color: var(--text-light);
-  font-size: 14px;
-  margin-bottom: 24px;
+  font-size: 15px;
+  margin-bottom: 28px;
 }
 
 .connection-info {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   font-size: 13px;
   color: var(--text-light);
   margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(72, 235, 145, 0.04);
+}
+
+#server-select {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 13px;
+  background: #f8fafc;
+  color: var(--text);
+  outline: none;
+  transition: border 0.2s;
+}
+#server-select:focus {
+  border: 1.5px solid var(--primary);
 }
 
 .speed-bars {
@@ -86,38 +111,40 @@ body {
 }
 
 .bar-title {
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
+  letter-spacing: 0.5px;
 }
 
 .test-icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 18px;
 }
 
 .download-icon {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary-light));
 }
 
 .upload-icon {
-  background-color: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary), var(--primary-light));
 }
 
 .bar-container {
-  height: 200px;
-  width: 30px;
+  height: 180px;
+  width: 28px;
   background-color: var(--border);
   border-radius: 15px;
-  margin: 16px 0;
+  margin: 14px 0;
   position: relative;
   overflow: hidden;
 }
@@ -127,17 +154,58 @@ body {
   bottom: 0;
   width: 100%;
   border-radius: 15px;
-  transition: height 1s ease-out;
+  transition: height 1s cubic-bezier(.4,2,.6,1);
+}
+
+
+.load-bar-download{
+  animation-name: loadDownloadAnimation;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes loadDownloadAnimation {
+  0%{
+    height: 100%;
+  }
+  100%{
+    height: 0%;
+  }
+}
+
+.load-bar-upload{
+  animation-name: loadUploadAnimation;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes loadUploadAnimation {
+  0%{
+    height: 0%;
+  }
+  100%{
+    height: 100%;
+  }
 }
 
 #barradownload {
-  background-color: var(--primary);
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
   height: 0%;
 }
 
 #barraupload {
-  background-color: var(--secondary);
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
   height: 0%;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  margin-top: 4px;
 }
 
 .ping-container {
@@ -145,16 +213,17 @@ body {
 }
 
 .ping-title {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   margin-bottom: 8px;
 }
 
 .ping-value {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 8px 0;
-  color: var(--dark);
+  color: var(--primary);
+  text-shadow: 0 1px 0 #e2e8f0;
 }
 
 .ping-bar {
@@ -166,15 +235,29 @@ body {
   overflow: hidden;
 }
 
+
 #pingbarra {
   position: absolute;
   height: 100%;
   border-radius: 4px;
   background: linear-gradient(to right, var(--primary), var(--secondary));
   width: 0%;
-  transition: width 1s ease-out;
+  transition: width 1s cubic-bezier(.4,2,.6,1);
 }
-
+.load-bar-ping{
+  animation-name: loadPingAnimation;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} 
+@keyframes loadPingAnimation  {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
 .ping-scale {
   display: flex;
   justify-content: space-between;
@@ -193,6 +276,8 @@ body {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px;
+  background: #f8fafc;
+  box-shadow: 0 1px 4px rgba(72, 235, 145, 0.03);
 }
 
 .metric-title {
@@ -208,13 +293,13 @@ body {
 
 #repeat-test {
   width: 100%;
-  background-color: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: white;
   border: none;
   border-radius: 8px;
   padding: 14px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 24px;
   transition: all 0.2s;
@@ -222,290 +307,38 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: 0 2px 8px rgba(72, 235, 145, 0.08);
+  letter-spacing: 0.5px;
 }
 
 #repeat-test:hover {
-  background-color: var(--primary-light);
-  transform: translateY(-1px);
+  background: linear-gradient(90deg, var(--primary-light), var(--secondary-light));
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 4px 16px rgba(72, 235, 145, 0.13);
 }
 
 @media (max-width: 640px) {
   .speed-test-container {
-    padding: 32px 24px;
+    padding: 24px 8px;
     border-radius: 0;
+    max-width: 100vw;
   }
 
   .speed-bars {
     flex-direction: column;
     gap: 32px;
   }
+  .connection-info {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@property --p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
 
 
 
@@ -661,7 +494,7 @@ body {
 ⠀⡟⠀⠀⠀⠎⡍⠉⢹⢿⡏⠁⠀⠀⠀⠀⢹⡅⠀⠀⠀⠀⠀⠀⠀⠀⡼⢡⣷⠀
 ⡼⠃⠀⠀⠀⠆⡇⢀⠟⡆⠀⠀⠀⠀⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⠀⣸⠁⢸⢻⠀
 ⠁⠀⠀⠀⠀⠀⠁⡾⠀⢹⡘⠃⠀⠀⠀⠀⠀⠈⢣⢤⡀⠀⠀⠀⢠⠇⠀⢸⢸⡆
-⠀⠀⠀⠀⠀⠀⢾⡇⠀⠀⢳⡀⠀⠀⠀⠀⠀⠀⠀⢧⠙⠆⠀⢠⠏⠀⠀⡟⠀⡇
+⠀⠀⠀⠀⠀⠀⢾⡇⠀⠀⢳⡀⠀⠀⠀⠀⠀⠀⠀⢧⠙⠆⠀⢠⠏⠀⠀⠀⡇
 ⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⢠⠏⠀⠀⠀⡇
 
 Feito por: Luiz Felipe */
